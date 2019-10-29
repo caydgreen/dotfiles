@@ -8,19 +8,11 @@ if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline
  source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-# CASE_SENSITIVE="true"
-
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
-# COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load?
 plugins=(
   git
 )
@@ -37,3 +29,6 @@ alias dcup="docker-compose -f docker-compose-mac.yml up"
 alias dcdown="docker-compose -f docker-compose-mac.yml down"
 alias db="docker-compose -f docker-compose-mac.yml build"
 alias tests="docker-compose -f docker-compose-mac.yml bin/rspec"
+alias git statys="git status"
+alias j="jobs"
+alias gitclean="git branch -D `git branch -vv | grep -v origin | awk '{print $1}'`"
